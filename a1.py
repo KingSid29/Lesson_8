@@ -27,3 +27,19 @@
 # c) Turn the turtle right by `angle` degrees after each side.
 
 # 6) Call `turtle.done()` to keep the turtle window open after drawing finishes.
+
+import turtle
+
+screen = turtle.Screen()
+screen.bgcolor("orange")
+screen.setup(400, 400)
+
+polygon = turtle.Turtle()
+
+num_sides = 6
+side_length = 100
+angle = 360.0 / num_sides
+
+for _ in range(num_sides):
+    polygon.forward(side_length)
+    polygon.right(angle)
